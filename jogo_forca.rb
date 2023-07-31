@@ -16,7 +16,7 @@ while new_game == "S"
     tentativas = 7
     fim = false
     while fim == false
-        puts "Você ainda tem #{tentativas}!"
+        #puts "Você ainda tem #{tentativas}!"
         puts "Você já escolhe as seguintes letras #{letras_digitadas}!"        
         puts "Escolha uma letra: "
         sua_letra = gets.chomp
