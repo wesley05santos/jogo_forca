@@ -12,12 +12,10 @@ while new_game == "S"
     end
 
     puts palavra_parcial.join
-
-    tentativas = 7
+    
     fim = false
-    while fim == false
-        #puts "Você ainda tem #{tentativas}!"
-        puts "Você já escolhe as seguintes letras #{letras_digitadas}!"        
+    while fim == false        
+        puts "Você já escolheu as seguintes letras #{letras_digitadas}!"        
         puts "Escolha uma letra: "
         sua_letra = gets.chomp
         letras_digitadas << sua_letra.upcase
@@ -25,11 +23,11 @@ while new_game == "S"
         palavra_sorteada.each_char do |letra|
             if palavra_parcial[aux] == " _ "
                 if letra == sua_letra
-                    palavra_parcial[aux] = sua_letra                                    
+                    palavra_parcial[aux] = sua_letra                                  
                 end 
             end            
             aux += 1            
-        end       
+        end            
         if palavra_parcial.join.count(" _ ") > 0
             fim = false
             puts palavra_parcial.join.upcase
